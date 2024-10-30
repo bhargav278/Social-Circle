@@ -9,7 +9,7 @@ const userSchema = new Schema({
         uppercase: true,
         trim: true,
         minLength: 3,
-        maxLength: 15,
+        maxLength: 40,
         validate(value) {
             if (!validator.isAlpha(value)) {
                 throw new Error("Invalid First Name");
@@ -18,10 +18,11 @@ const userSchema = new Schema({
     },
     lastName: {
         type: String,
+        required:true,
         uppercase: true,
         trim: true,
         minLength: 3,
-        maxLength: 15, 
+        maxLength: 40, 
         validate(value) {
             if (!validator.isAlpha(value)) {
                 throw new Error("Invalid Last Name");
