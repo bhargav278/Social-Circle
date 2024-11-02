@@ -89,7 +89,7 @@ const userSchema = new Schema({
             },
             {
                 validator: function (skillsArray) {
-                    return skillsArray.every(skill => skill.length >= 1 && skill.length <= 20);
+                    return skillsArray.every(skill => skill.length >= 1 && skill.length <= 30);
                 },
                 message: "Each skill must be between 2 and 20 characters long."
             }
